@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/love_bg">
@@ -26,7 +27,8 @@
             android:paddingRight="20dp"
             android:paddingBottom="8dp"
             android:textColor="@color/editTextColor"
-            android:textColorHint="#E6E3E3" />
+            android:textColorHint="#E6E3E3"
+            app:fontFamily="@font/lobster" />
 
         <EditText
             android:id="@+id/yourLoverNameET"
@@ -45,13 +47,15 @@
             android:paddingRight="20dp"
             android:paddingBottom="8dp"
             android:textColor="@color/editTextColor"
-            android:textColorHint="#E6E3E3" />
+            android:textColorHint="#E6E3E3"
+            app:fontFamily="@font/lobster" />
 
         <Button
             android:id="@+id/calculateBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/heart"
+            app:fontFamily="@font/exo_2_extrabold"
             android:text="@string/calculate"
             android:textColor="#FFF" />
 

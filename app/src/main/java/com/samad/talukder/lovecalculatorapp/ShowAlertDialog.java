@@ -4,7 +4,12 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -26,6 +31,7 @@ public class ShowAlertDialog {
         TextView showLovePercentTV = dialog.findViewById(R.id.showLovePercentTV);
         showLovePercentTV.setText(loveScore + " %");
         TextView showTipsTV = dialog.findViewById(R.id.showTipsTV);
+
         showTipsTV.setText("That a relationship between " + yourName.toUpperCase() + " & " + yourLoverName.toUpperCase() + " , " + loveTips);
         ProgressBar progressBar = dialog.findViewById(R.id.progressBar);
         progressBar.setProgress(loveScore);
@@ -43,7 +49,7 @@ public class ShowAlertDialog {
             public void onClick(View v) {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Love Calculator App");
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "Love compatibility between " + yourName.toUpperCase() + " & " + yourLoverName.toUpperCase() + " is " + loveScore + "%"+"\n"+"Powered By: Samad Talukder ");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Love compatibility between " + yourName.toUpperCase() + " & " + yourLoverName.toUpperCase() + " is " + loveScore + "%" + "\n" + "Powered By: Samad Talukder ");
                 shareIntent.setType("text/plain");
                 context.startActivity(Intent.createChooser(shareIntent, "Share app via"));
             }
