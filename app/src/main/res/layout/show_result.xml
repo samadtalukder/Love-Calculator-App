@@ -52,7 +52,35 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:indeterminate="false"
+                            android:background="@drawable/circle_shape"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/custom_progressbar_drawable" />
+
+
+                        <TextView
+                            android:id="@+id/showLovePercentTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/progressBar"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="42dp"
+                            android:text="@string/_100"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+                    <!--<TextView
                         android:id="@+id/showLovePercentTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -61,7 +89,7 @@
                         android:text="@string/_100"
                         android:textColor="@android:color/primary_text_light"
                         android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold" />-->
 
 
                     <TextView

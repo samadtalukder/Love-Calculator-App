@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String yourNameStr = yourName.getText().toString();
                 String yourLoverNameStr = yourLoverName.getText().toString();
-                int loveScore = LoveCalculator.loveCalculationASCIIMethod(yourNameStr, yourLoverNameStr) % 100;
+                int loveScore = LoveCalculator.loveCalculation(yourNameStr, yourLoverNameStr) % 100;
                 if ((yourNameStr.isEmpty() || yourNameStr.length() < 2) || (yourLoverNameStr.isEmpty() || yourLoverNameStr.length() < 2) || (yourNameStr.equals(yourLoverNameStr))) {
                     Toast.makeText(MainActivity.this, "Enter Your Name & Your Lover Name", Toast.LENGTH_SHORT).show();
                     yourName.setText("");
